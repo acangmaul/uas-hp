@@ -7,6 +7,6 @@ CREATE TABLE IF NOT EXISTS `tb_handphone` (
     Merk_HP varchar(20) NOT NULL,
     Harga int(11) NOT NULL,
     Spesifikasi text NOT NULL,
-    Gambar varchar(100) NOT NULL,
+    Gambar varchar(1000) NOT NULL,
     PRIMARY KEY (ID_HP)
 );

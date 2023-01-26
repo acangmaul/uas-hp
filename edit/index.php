@@ -49,7 +49,7 @@ $hp = mysqli_fetch_assoc($hp);
 
       <div class="mb-3">
         <label for="gambar" class="form-label">Gambar (URL)</label>
-        <input type="text" name="gambar" id="gambar" class="form-control" maxlength="100" value="<?php echo $hp["Gambar"]; ?>" required>
+        <input type="text" name="gambar" id="gambar" class="form-control" maxlength="1000" value="<?php echo $hp["Gambar"]; ?>" required>
       </div>
 
       <a class="btn btn-danger" href="../">Cancel</a>
