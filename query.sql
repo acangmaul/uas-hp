@@ -10,3 +10,10 @@ CREATE TABLE IF NOT EXISTS `tb_handphone` (
     Gambar varchar(1000) NOT NULL,
     PRIMARY KEY (ID_HP)
 );
+
+CREATE TABLE IF NOT EXISTS `tb_user` (
+    ID_User int(11) NOT NULL AUTO_INCREMENT,
+    Username varchar(20) NOT NULL,
+    Pass varchar(255) NOT NULL,
+    PRIMARY KEY (ID_User)
+);

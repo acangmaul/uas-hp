@@ -1,5 +1,12 @@
 <?php
-require_once "./koneksi.php"
+require_once "./koneksi.php";
+
+if (!isset($_SESSION["username"])) {
+  echo "<script>
+    if (!alert('Anda belum login!'))
+      window.location.href = 'login';
+  </script>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +22,13 @@ require_once "./koneksi.php"
 
 <body>
   <div class="container">
-    <h1 class="fw-bold">DAFTAR HANDPHONE</h1>
+    <div class="d-flex justify-content-between">
+      <h1 class="fw-bold">DAFTAR HANDPHONE</h1>
+      <div class="d-flex gap-2">
+        <span>Halo <?php echo $_SESSION["username"]; ?></span>
+        <a href="logout.php">Logout</a>
+      </div>
+    </div>
     <h5>Menampilkan berbagai merk hp seperti Samsung, Oppo, dan Apple</h5>
     <a class="btn btn-outline-primary" href="tambah_data">Tambah Data HP</a>
 
